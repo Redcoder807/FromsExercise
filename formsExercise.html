@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Forms Exercise">
-    <title>Forms Exercise</title>
+    <meta name="description" content="Survey">
+    <title>Survey</title>
 </head>
 <body>
+    <form>
     <fieldset>
         <legend>Customer Experience Survey</legend>
         <label for="storen">Store Number</label>
-        <input type="number" id="storen" value="3109" required>
+        <select name="storen" id="">
+            <option hidden>Select A Store</option>
+            <option value="3109">3109</option>
+            <option value="2421">2421</option>
+            <option value="5357">5357</option>
+        </select>
         <fieldset>
             <legend>When you visited:</legend>
             <label for="date">Date Visited</label>
-            <input type="date" id="date" required>
+            <input type="date" id="date" min="2022-01-01" max="2022-12-31">
             <br>
             <label for="time">Time</label>
-            <input type="time" id="time" required>
+            <input type="time" id="time" >
         </fieldset>
         <label for="nameinput">Full Name:</label>
-        <input type="text" id="nameinput" placeholder="Name" required>
+        <input type="text" id="nameinput" placeholder="Name" >
         <br>
         <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="Email" required>
+        <input type="email" id="email" placeholder="Email" >
         <fieldset>
             <legend>How would you rate your satisfaction with your visit?</legend>
             <input type="radio" name="Satisfaction" value="Positive" id="Positive">
             <label for="Positive">Positive</label>
             <br>
-            <input type="radio" name="Satisfaction" value="Neutral" id="Neutral">
+            <input type="radio" name="Satisfaction" value="Neutral" id="Neutral" checked>
             <label for="Neutral">Neither Satisfied or Dissatisfied</label>
             <br>
             <input type="radio" name="Satisfaction" value="Negative" id="Negative">
@@ -42,12 +48,18 @@
         <br>
         <label for="month">Times visited last month:</label>
         <br>
-        <input type="text">
+        <input type="number" name="month" id="month" min="1" max="30">
         <br>
-        <input type="checkbox" id="contact">
+        <input type="checkbox" id="contact" required>
         <label for="contact">Please check the box if you would be willing to be contacted about your experience </label>
         <br>
-        <input type="submit" value="submit">
+        <label for="Password">Password</label>
+        <input type="password" name="Password" id="Password" pattern=".{5,10}" title="Please enter a password that is 5 to 10 characters in length">
+        <br>
+        <input type="reset">
+        <br>
+        <input type="submit">
     </fieldset>
+</form>
 </body>
 </html>
