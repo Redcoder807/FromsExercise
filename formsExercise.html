@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forms Exercise">
+    <title>Forms Exercise</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Customer Experience Survey</legend>
+        <label for="storen">Store Number</label>
+        <input type="number" id="storen" value="3109" required>
+        <fieldset>
+            <legend>When you visited:</legend>
+            <label for="date">Date Visited</label>
+            <input type="date" id="date" required>
+            <br>
+            <label for="time">Time</label>
+            <input type="time" id="time" required>
+        </fieldset>
+        <label for="nameinput">Full Name:</label>
+        <input type="text" id="nameinput" placeholder="Name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email" required>
+        <fieldset>
+            <legend>How would you rate your satisfaction with your visit?</legend>
+            <input type="radio" name="Satisfaction" value="Positive" id="Positive">
+            <label for="Positive">Positive</label>
+            <br>
+            <input type="radio" name="Satisfaction" value="Neutral" id="Neutral">
+            <label for="Neutral">Neither Satisfied or Dissatisfied</label>
+            <br>
+            <input type="radio" name="Satisfaction" value="Negative" id="Negative">
+            <label for="Negative">Dissatisfied</label>
+        </fieldset>
+        <label for="Experience">Tell us about your Experiences:</label>
+        <br>
+        <textarea name="Experience" id="Experience" cols="20" rows="2"></textarea>
+        <br>
+        <label for="month">Times visited last month:</label>
+        <br>
+        <input type="text">
+        <br>
+        <input type="checkbox" id="contact">
+        <label for="contact">Please check the box if you would be willing to be contacted about your experience </label>
+        <br>
+        <input type="submit" value="submit">
+    </fieldset>
+</body>
+</html>
